@@ -1,4 +1,4 @@
-import streamlit as st
+def count(s):
+    return s * 2
 
-
-st.title("my name is fuck")
+count(22)

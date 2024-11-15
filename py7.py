@@ -1,5 +1,5 @@
 def kubus (a) :
-    count =  a * a * a
+    count =  a**3
     print(count)
 
 kubus(8)
@@ -13,6 +13,5 @@ def hitung(n):
     print(n)
     if n < 10:
         hitung(n + 1)
-        
         
 hitung(1)
