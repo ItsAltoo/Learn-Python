@@ -56,3 +56,31 @@ print("'"+tengah+"'")
 
 kiri  = 'kiri'.strip()
 print("'"+kiri+"'")
+
+dataTeman = {
+    "nama" : 'malik',
+    "age" : 18,
+    'hobby': 'code',
+    'location' : 'unknown'
+}
+
+for i in dataTeman:
+    print(i)
+    
+print(20*'~')
+print(dataTeman.keys())
+for key in dataTeman.keys():
+    print(dataTeman.get(key))
+
+print(20*'~')
+for value in dataTeman.values():
+    print(value)
+
+print(20*'~')
+print(dataTeman.items())
+for item in dataTeman.items():
+    print(item)
+    
+print(20*'~')
+for key,value in dataTeman.items():
+    print(f"key = {key},value = {value}")
