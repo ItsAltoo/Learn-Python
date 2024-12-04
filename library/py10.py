@@ -1,9 +1,11 @@
-from librarypy10 import object
+from librarypy10 import dictionary
 
 from sys import path
 
-print(object['segitiga'](2,4))
-print(dir(object))
+print(dictionary['segitiga'](2,4))
+print(dictionary)
+
+print(dir(dictionary))
 
 
 # for i in range(1,4):

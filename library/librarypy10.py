@@ -1,6 +1,4 @@
-
-
-object = {
+dictionary = {
     'name' : 'malik',
     'age' : 14,
     'hobby' : 'code',
