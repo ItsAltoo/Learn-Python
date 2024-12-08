@@ -1,3 +1,7 @@
+import os
+
+os.system('cls')
+
 class Mahasiswa:
     #class variable / variable statis
     jumlah = 0
@@ -17,7 +21,7 @@ print(Mahasiswa.jumlah)
 mhs = Mahasiswa('Yami','Kuro',102312)
 print(Mahasiswa.jumlah)
 
-
+print('\n'+20*'~'+'\n')
 
 
 class Hero:
@@ -47,4 +51,14 @@ class Hero:
 
 hero1 = Hero('Mamot',120,20,50)
 hero2 = Hero('kiku',122,32,41)
+
+hero1.who()
+hero2.who()
+
+hero1.darahUp(2)
+hero2.darahUp(8)
+
+print(hero1.getDarah())
+print(hero2.getDarah())
+
 
