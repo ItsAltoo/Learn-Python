@@ -15,7 +15,7 @@ class Buku:
 [blue]Tahun terbit[/blue] : [red]{self.tahun_terbit}[/red] 
               """)
         
-
+  
 # inheritance 
 class Mahasiswa(Buku):
     def __init__(self, judul, pengarang, tahun_terbit,nama_mahasiswa,nim):
