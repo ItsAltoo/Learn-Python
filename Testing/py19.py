@@ -1,4 +1,7 @@
 from rich import print
+import os 
+
+os.system('cls')
 
 class Buku:
     
