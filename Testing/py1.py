@@ -50,8 +50,8 @@ while True:
         loop = True
         while loop:
             print("\n==================Daftar Belanjaan====================")
-            for i,pilih in enumerate(isiBelanjaan,1):
-                print(f"{i}. {pilih}")
+            for i,memilih in enumerate(isiBelanjaan,1):
+                print(f"{i}. {memilih}")
             print("=======================================================")
             
             print("Ketik 'y/n' untuk keluar atau tidak")

@@ -1,4 +1,4 @@
-
+# latihan UAS #
 
 def mtk (a,b):
     return a + b

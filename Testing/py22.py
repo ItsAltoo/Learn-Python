@@ -1,3 +1,5 @@
+# OOP tkinter #
+
 import tkinter
 
 main_window = tkinter.Tk()

@@ -1,3 +1,6 @@
+# gerbang program __main__ #
+
+
 # __main__ adalah top level code environment
 
 # __name__ == "__main__" akan terjadi jika ada di program utama

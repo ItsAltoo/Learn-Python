@@ -1,3 +1,5 @@
+# Private Variable #
+
 class Name:
     
     # class variabel

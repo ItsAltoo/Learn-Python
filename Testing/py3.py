@@ -17,3 +17,18 @@ list = [[1,2,3,4],
 for i in range(0,4):
     print(list[i],end=" ")
     
+
+print('\n',20*'-')
+
+
+tipeSet = {12,23,12,3,4,1,1,2}
+print(tipeSet)
+
+print('\n',20*'-')
+
+nama = 'Malik_241223124'
+
+for i in nama:
+    if i == '_':
+        break
+    print()
