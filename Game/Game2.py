@@ -14,7 +14,7 @@ class Hero:
         enemy.getAttack(self,self.power)
         
     def getAttack(self,enemy,enemyPower):
-        print(self.name, 'diserang', enemy.name)
+        print(self.name, 'diserang', enemy.name) # <- contoh dari penggunaan Dynamic Typing 'enemy.name'
         attacked = enemyPower
         print('Get attack :' + str(attacked))
         self.health -= attacked
