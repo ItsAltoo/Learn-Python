@@ -13,23 +13,24 @@ class Jadwal(DataMhs):
         super().__init__(matkul, sks, waktu)
     
     def addData(self):
-        with open('./dataJadwal,txt','a')as file:
+        with open('Testing/db/py27/dataJadwal,txt','a')as file:
             file.write(f"Matkul : {self.matkul} , SKS : {self.sks} , Waktu : {self.waktu} menit \n")
     
     def showData(self):
         try:
-            with open('./dataJadwal,txt','r')as file:
+            with open('Testing/db/py27/dataJadwal,txt','r')as file:
                 print(file.read())
         except:
             print('File tidak di temukan')
 
 
-while True:
-    matkul = input("Masukkan Matkul : ")
-    sks = input("Masukkan SKS : ")
-    waktu = input("Masukkan Waktu : ")
+if __name__ == '__main__':
+    while True:
+        matkul = input("Masukkan Matkul : ")
+        sks = input("Masukkan SKS : ")
+        waktu = input("Masukkan Waktu : ")
 
-    dataMatkul = Jadwal(matkul,sks,waktu)
+        dataMatkul = Jadwal(matkul,sks,waktu)
 
-    dataMatkul.addData()
-    dataMatkul.showData()
+        dataMatkul.addData()
+        dataMatkul.showData()
