@@ -13,12 +13,12 @@ class Jadwal(DataMhs):
         super().__init__(matkul, sks, waktu)
     
     def addData(self):
-        with open('Testing/db/py27/dataJadwal,txt','a')as file:
+        with open('Testing/db/py27/dataJadwal.txt','a')as file:
             file.write(f"Matkul : {self.matkul} , SKS : {self.sks} , Waktu : {self.waktu} menit \n")
     
     def showData(self):
         try:
-            with open('Testing/db/py27/dataJadwal,txt','r')as file:
+            with open('Testing/db/py27/dataJadwal.txt','r')as file:
                 print(file.read())
         except:
             print('File tidak di temukan')
