@@ -75,13 +75,16 @@ yuki = Data('Yuki')
 
 yui = Data('Yui')
 
-print(yuki.getAngka1())
-print(Data.getAngka2())
+print(f"Memanggil dengan Objek : {yuki.getAngka1()}")
+print(f"Memanggil dengan class : {Data.getAngka2()}")
 
+print(5*'~')
 yuta = Data('Yuta')
 
-print(Data.getAngka3())
-print(yuki.getAngka3())
+print(f"Memanggil dengan Objek : {yuki.getAngka3()}")
+print(f"Memanggil dengan class : {Data.getAngka3()}")
 
-print(yuki.getAngka4())
-print(Data.getAngka4())
+print(5*'~')
+
+print(f"Memanggil dengan Objek : {yuki.getAngka4()}")
+print(f"Memanggil dengan class : {Data.getAngka4()}")
