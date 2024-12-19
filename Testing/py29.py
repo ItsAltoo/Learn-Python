@@ -55,3 +55,8 @@ print(yuki.__dict__)
 del yuki.power
 
 print(yuki.__dict__)
+
+data = [12,3,412,532,12]
+
+count = sum(data) / len(data)
+print(count)
