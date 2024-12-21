@@ -1,8 +1,5 @@
-from django.shortcuts import render
-
-# Create your views here.
-from .models import Post
+# filepath: /C:/Users/itsma/OneDrive/Documents/Project/Belajar/Python/Website/myproject1/myapp/views.py
+from django.http import HttpResponse
 
 def home(request):
-    posts = Post.objects.all()
-    return render(request, 'home.html', {'posts': posts})
+    return HttpResponse("Hello, world. You're at the home page.")
