@@ -21,4 +21,6 @@ from myapp import views  # Import views from myapp
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),  # Add a URL pattern for the home view
+    path('about/', views.about, name='about'),  # Add a URL pattern for the about view
+    path('contact/', views.contact, name='contact'),  # Add a URL pattern for the contact view
 ]

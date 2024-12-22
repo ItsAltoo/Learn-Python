@@ -36,8 +36,4 @@ urlpatterns = [
     # maka dari itu kita harus mengimport include terlebih dahulu 
     # dari django.urls 
     
-    
-    
-    
-    
 ]
