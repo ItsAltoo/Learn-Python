@@ -12,4 +12,4 @@ def contact(request):
     return HttpResponse('<button style="background-color: blue; color: white;">Contact Us</button>')
 
 def hello_world(request):
-    return render(request,'myapp/hello.html')
+    return render(request,'hello.html')
