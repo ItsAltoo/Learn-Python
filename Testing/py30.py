@@ -47,18 +47,34 @@ class Car:
         self.year = year
         
     def info(self):
+        """ method info """
         return f"Name : {self.name} , Brand : {self.brand} , Year : {self.year}"
     
 
-    def info2(self,name1,name2):
+    def info2(self,*args):
+        """ *args """
         return f""" 
     Car 1 :
-    Name : {self.name} , Brand : {self.brand} , Year : {self.year} 
+    Name : {self.name} , Brand : {self.brand} , Year : {self.year}
     Car 2 :
-    Name : {name1.name} , Brand : {name1.brand} , Year : {name1.year}
+    Name : {args[0].name} , Brand : {args[0].brand} , Year : {args[0].year}
     Car 3 :
-    Name : {name2.name} , Brand : {name2.brand} , Year : {name2.year}"""
+    Name : {args[1].name} , Brand : {args[1].brand} , Year : {args[1].year}"""
+    # apakah parameter di info2 bisa menggunakan *args atau **kwargs ?
+    # bisa menggunakan *args atau **kwargs jika parameter yang diinputkan adalah object
+    # contohnya : info2(self,*args) atau info2(self,**kwargs)
+    #bagaimana cara mengakses atribut dari object yang diinputkan ? 
+    # menggunakan object.atribut 
     
+    def info3(self,**kwargs):
+        """ **kwargs """
+        return f""" 
+    Car 1 :
+    Name : {self.name} , Brand : {self.brand} , Year : {self.year}
+    Car 2 :
+    Name : {kwargs['name1']} , Brand : {kwargs['brand1']} , Year : {kwargs['year1']}
+    Car 3 :
+    Name : {kwargs['name2']} , Brand : {kwargs['brand2']} , Year : {kwargs['year2']}"""
     
 
 toyota = Car('avanza','toyota',2019)
@@ -70,3 +86,6 @@ print(toyota.info())
 print(bmw.info())
 print(toyota.info2(bmw,lambo))
 print(bmw.info2(toyota,lambo))
+
+print(toyota.info3(name1 = 'aventador',brand1 = 'Lamborghini',year1 = 2019,name2 = 'x5',brand2 = 'BMW',year2 = 2019))
+print(lambo.info3(name1 = 'avanza',brand1 = 'toyota',year1 = 2019,name2 = 'x5',brand2 = 'BMW',year2 = 2019))

@@ -69,9 +69,9 @@ opTambah = f"Hasil Dari Pertambahan = {math(1,23,4,5,operator = "tambah")}"
 opKali = f"Hasil Dari Perkalian = {math(1,23,4,5,operator = "kali")}"
 
 
-path = "db/py16/db.txt"
-with open(path,'a') as file:
-    file.write(f"{opTambah}\n{opKali}\n\n")
+# path = "db/py16/db.txt"
+# with open(path,'a') as file:
+#     file.write(f"{opTambah}\n{opKali}\n\n")
 
-with open(path,'r')as file:
-    print(file.read())
+# with open(path,'r')as file:
+#     print(file.read())
