@@ -86,6 +86,11 @@ print(toyota.info())
 print(bmw.info())
 print(toyota.info2(bmw,lambo))
 print(bmw.info2(toyota,lambo))
-
+print(15*' </> ')
 print(toyota.info3(name1 = 'aventador',brand1 = 'Lamborghini',year1 = 2019,name2 = 'x5',brand2 = 'BMW',year2 = 2019))
 print(lambo.info3(name1 = 'avanza',brand1 = 'toyota',year1 = 2019,name2 = 'x5',brand2 = 'BMW',year2 = 2019))
+
+
+print(15*' </> ')
+
+
