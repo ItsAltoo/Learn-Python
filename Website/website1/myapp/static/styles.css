@@ -1,6 +1,25 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, sans-serif;
   color: #f30c04;
-  background-color: #05cdff;
+  background-color: #00f721;
   font-size: 16px;
+}
+
+h1 {
+  color: blue;
+}
+
+.btn {
+  background-color: green;
+  color: rgb(40, 3, 252);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn a {
+  color: white;
+  text-decoration: none;
 }

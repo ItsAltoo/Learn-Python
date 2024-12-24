@@ -1,3 +1,6 @@
+import os 
+os.system('cls')
+
 class Mhs:
     def __init__(self,nama,nim):
         self.nama = nama
@@ -35,4 +38,35 @@ print(tuple[1])
 # tuple[0] = 2 
 # tuple[0] = 2 # error karena tuple tidak bisa diubah
 
-# 
+print(15*' </> ')
+
+class Car:
+    def __init__(self,name,brand,year):
+        self.name = name
+        self.brand = brand
+        self.year = year
+        
+    def info(self):
+        return f"Name : {self.name} , Brand : {self.brand} , Year : {self.year}"
+    
+
+    def info2(self,name1,name2):
+        return f""" 
+    Car 1 :
+    Name : {self.name} , Brand : {self.brand} , Year : {self.year} 
+    Car 2 :
+    Name : {name1.name} , Brand : {name1.brand} , Year : {name1.year}
+    Car 3 :
+    Name : {name2.name} , Brand : {name2.brand} , Year : {name2.year}"""
+    
+    
+
+toyota = Car('avanza','toyota',2019)
+bmw = Car('x5','BMW',2019)
+lambo = Car('aventador','Lamborghini',2019)
+
+
+print(toyota.info())
+print(bmw.info())
+print(toyota.info2(bmw,lambo))
+print(bmw.info2(toyota,lambo))
