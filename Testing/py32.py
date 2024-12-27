@@ -29,3 +29,7 @@ fisika = BukuFisika('fisika',2018)
 
 aljabar.showInfo()
 fisika.showInfo()
+
+# override method adalah method yang diwarisi dari class induk, kemudian diubah isinya di class anak 
+# dengan cara mendefinisikan method yang sama dengan class induk di class anak 
+# seperti menimpa method yang ada di class induk

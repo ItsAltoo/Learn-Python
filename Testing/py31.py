@@ -61,10 +61,10 @@ class Hero:
     
     def attack(self,target):
         print(self.name,'is attacking!. tagert is',target.name)
-        if target.defense != 0:
+        if target.defense >= 0:
             target.defense -= self.atk
             print('Defense:',target.defense)
-        elif target.defense == 0:
+        elif target.defense <= 0:
             target.hp -= self.atk    
             print('HP:',target.hp)
         elif target.hp == 0:
@@ -79,19 +79,8 @@ class Hero:
 
 
 
-def main():
-    while True:
-        print(8 * '=',' Welcome ',8 * '=')
-        print('1. Add Hero     2. Delete Hero')
-        print('3. Update Hero  4. Attack')
-        print('5. Show All     6. Exit')
-        print(8 * '=',' Choose ',8 * '=')
-        
-        choose = input('Please input the number: ')
-        
-        
-        
-archer = Hero('Archer',100,50,10,5,'Archer')
+
+archer = Hero('Archer',100,50,20,5,'Archer')
 knight = Hero('Knight',200,20,5,10,'Knight')
 
 archer.show_info()
@@ -104,5 +93,44 @@ knight.show_info()
 
 
 # if __name__ == '__main__':
-#     # main()
+#      while True:
+#         print(8 * '=',' Welcome ',8 * '=')
+#         print('1. Add Hero     2. Delete Hero')
+#         print('3. Update Hero  4. Attack')
+#         print('5. Show All     6. Exit')
+#         print(8 * '=',' Choose ',8 * '=')
+        
+#         choose = input('Please input the number: ')
+        
+#         if choose == '1':
+#             add = Hero('','',0,0,0,0)
+#             add.add_hero()
+#         elif choose == '2':
+#             delete = Hero('','',0,0,0,0)
+#             delete.delete_hero()
+#         elif choose == '3':
+#             update = Hero('','',0,0,0,0)
+#             name = input('Name: ')
+#             hp = int(input('HP: '))
+#             mp = int(input('MP: '))
+#             atk = int(input('ATK: '))
+#             defense = int(input('DEFENSE: '))
+#             classes = input('CLASSES: ')
+#             update.update_info(name,hp,mp,atk,defense,classes)
+#         elif choose == '4':
+#             print(8 * '=',' Attack ',8 * '=')
+#             attacker = input('Attacker: ')
+#             target = input('Target: ')
+#             for i in Hero.data:
+#                 if i.name == attacker:
+#                     for j in Hero.data:
+#                         if j.name == target:
+#                             i.attack(j)
+#                             break
+#                     break
+#         elif choose == '5':
+#             for i in Hero.data:
+#                 i.show_info()
+#         elif choose == '6':
+#             break
     
