@@ -74,3 +74,30 @@ class BukuPelajaran(BukuAljabar,BukuFisika,BukuKimia):
     
 pelajaran = BukuPelajaran('pelajaran',2017)
 pelajaran.showInfo()
+
+
+print('=====================================')
+
+
+# method resolution order (MRO) adalah urutan pengecekan class yang diwarisi oleh class anak 
+# urutan pengecekan class adalah dari kiri ke kanan 
+
+class A:
+    def show(self):
+        print('ini adalah class A')
+        
+class B:
+    def show(self):
+        print('ini adalah class B')
+        
+class C(A,B):
+    pass
+    # def show(self):
+    #     print('ini adalah class C')
+    # jika method show di class C diaktifkan maka method show di class C yang akan dijalankan 
+
+obj = C()
+obj.show()
+
+print('=====================================')
+
