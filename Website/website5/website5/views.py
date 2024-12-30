@@ -8,6 +8,7 @@ def index(request):
             ['/','Home'],
             ['/about','About'],
             ['/contact','Contact']
-        ]
+        ],
+        'banner': 'img/home.png'
     }
     return render(request,'index.html',context)

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,6 +7,7 @@
     <title>✨ {{judul}} ✨</title>
   </head>
   <body>
+    <img style="width: 100%" src="{% static banner %}" alt="" />
     <h1>{{subjudul}}</h1>
 
     {% for link,name in list %}
