@@ -1,14 +1,13 @@
 from django.shortcuts import render
 
-# Create your views here.
 def index(request):
     context = {
-        'judul': 'About Me..🤓',
-        'subjudul' : 'This About Me..',
+        'judul':'Welcome to my website 🫠',
+        'subjudul':'This my Home Page',
         'list':[
             ['/','Home'],
             ['/about','About'],
             ['/contact','Contact']
         ]
     }
-    return  render(request,'about/index.html',context)
+    return render(request,'index.html',context)
