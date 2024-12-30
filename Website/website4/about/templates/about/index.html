@@ -47,9 +47,11 @@
           list-style: none;
         "
       >
-        <li style="margin-left: 10px"><a href="/"> Home </a></li>
-        <li style="margin-left: 10px"><a href="/blog"> Blog </a></li>
-        <li style="margin-left: 10px"><a href="/about"> About </a></li>
+        {% for link,name in list %}
+
+        <li style="margin-left: 10px"><a href="{{link}}">{{name}}</a></li>
+
+        {% endfor %}
       </div>
     </div>
   </body>
