@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✨ {{judul}} ✨</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <img src="{% static banner %}" alt="" />
+    <h1>{{subjudul}}</h1>
+
+    <nav class="navbar">
+      <ul>
+        {% for link,name in list %}
+        <li><a href="{{link}}">{{name}}</a></li>
+        {% endfor %} 
+      </ul>
+    </nav>
+  </body>
+</html>
