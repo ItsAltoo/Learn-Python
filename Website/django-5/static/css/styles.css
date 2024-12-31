@@ -20,7 +20,7 @@ img {
 .navbar,
 ul {
   border: solid 1px #eaeaea;
-  border-radius: 10px;
+  border-radius: 50px 50px 15px 15px;
   height: 50px;
   width: 100%;
   display: flex;
