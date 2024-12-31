@@ -10,6 +10,7 @@ def index(request):
             ['/about','About'],
             ['/contact','Contact']
         ],
-        'banner':'about/img/about.png'
+        'banner':'about/img/about.png',
+        'heading' : 'color : lightblue'
     }
     return  render(request,'index.html',context)

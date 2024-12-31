@@ -44,6 +44,6 @@ a:active {
   color: aqua;
 }
 
-h1 {
-  text-align: center;
+marquee {
+  width: 100%;
 }
