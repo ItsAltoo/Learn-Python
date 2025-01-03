@@ -1,15 +1,80 @@
 {% extends "base.html" %} 
 
 {% block card %}
-  <div
-    id="card"
-    class="p-5 mb-4 bg-body-tertiary"
-    style="background-image:{{banner}}; color:{{fontColor}}"
-  >
-    <div class="container-fluid py-5">
-      <h1 class="display-5 fw-bold">{{heading}}</h1>
-      <p class="col-md-8 fs-4">{{subheading}}</p>
-      <p class="col-md-8 fs-4">{% lorem 1 b random %}</p>
-    </div>
+<div
+  id="card"
+  class="p-5 mb-4 bg-body-tertiary"
+  style="background-image:{{banner}}; color:{{fontColor}}"
+>
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">{{heading}}</h1>
+    <p class="col-md-8 fs-4">{{subheading}}</p>
+    <p class="col-md-8 fs-4">{% lorem 1 b random %}</p>
   </div>
-{% endblock card %}
+</div>
+{% endblock card %} 
+
+
+{% block carousel %}
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="http://127.0.0.1:8000/static/img/image.png"
+          class="w-100"
+          alt="..."
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="http://127.0.0.1:8000/static/img/image%20(1).png"
+          class="w-100"
+          alt="..."
+        />
+      </div>
+      <div class="carousel-item">
+        <img src="http://127.0.0.1:8000/static/img/image%20(2).png" class="w-100" alt="..." />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+{% endblock carousel %}
