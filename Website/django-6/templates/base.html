@@ -16,9 +16,17 @@
   </head>
   <body>
     {% include "snippets/navbar.html" %}
-    {% block carousel %}{% endblock carousel %}
+    
+    {% if page == 'home' %}
+      {% block carousel %}{% endblock carousel %}
+      <marquee behavior="" direction="right" scrollamount="13">
+        <h5>{{heading}}</h5>
+      </marquee>
+    {% endif %}
 
     {% block card %}{% endblock card %}
+
+
 
     <script src="{% static 'vendor/popper/popper.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/bootstrap.js' %}"></script>
