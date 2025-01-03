@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{% static 'img/Klee.jpg' %}" />
+    <title>{{title}}</title>
+
+    <link
+      rel="stylesheet"
+      href="{% static 'vendor/bootstrap/bootstrap.css' %}"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    {% include "snippets/navbar.html" %}
+    
+
+    {% block card %}{% endblock card %}
+
+    <script src="{% static 'vendor/popper/popper.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/bootstrap.js' %}"></script>
+  </body>
+</html>
