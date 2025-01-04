@@ -26,7 +26,10 @@
 
     {% block card %}{% endblock card %}
 
-
+    {% if page == 'about' %}
+      {% block card-about %}
+      {% endblock card-about %}
+    {% endif %}
 
     <script src="{% static 'vendor/popper/popper.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/bootstrap.js' %}"></script>
