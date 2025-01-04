@@ -82,15 +82,15 @@
 {% endblock carousel %}
 
 {% block card-about %}
-  <div class="card mb-3 mx-auto" style="max-width: 80%; height:500px">
+  <div class="card mb-3 mx-auto" style="max-width: 80%;">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="..." class="img-fluid rounded-start" alt="...">
+        <img src="{% static 'img/profil.jpg' %}" class="img-fluid rounded-start" alt="...">
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title">Its about me</h5>
+          <p class="card-text">{% lorem 1 b random %}</p>
           <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
