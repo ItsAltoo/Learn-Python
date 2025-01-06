@@ -69,8 +69,6 @@ DATABASES = {
         'NAME':'django-6',
         'USER':'root',
         'PASSWORD':'admin123',
-        'HOST':'localhost',
-        'PORT':'3306',
     }
 }
 
