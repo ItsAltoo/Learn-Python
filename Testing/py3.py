@@ -28,7 +28,22 @@ print('\n',20*'-')
 
 nama = 'Malik_241223124'
 
+namad= []
+nim = []
+
+mencari_underscore = False
+
 for i in nama:
     if i == '_':
-        break
-    print()
+        mencari_underscore = True
+        continue
+    
+    if mencari_underscore:
+        nim.append(i)
+    else:
+        namad.append(i)
+    
+    
+    
+print(namad)
+print(nim)
