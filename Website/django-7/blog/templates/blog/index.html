@@ -8,11 +8,15 @@
   <body>
     <h1>{{title}}</h1>
     <h2>{{heading}}</h2>
+    <form method="POST">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Submit</button>
+    </form>
 
-    {% for mahasiswa2024 in mahasiswa %}
-      <h1>{{mahasiswa2024.nama}}</h1>
-      <p>{{mahasiswa2024.nim}}</p>
-      <p>{{mahasiswa2024.bio}}</p>
+    {% for mahasiswa2024 in mhs %}
+    <h1>{{mahasiswa2024.nama}}</h1>
+    <p>{{mahasiswa2024.nim}}</p>
+    <p>{{mahasiswa2024.bio}}</p>
     {% endfor %}
   </body>
 </html>
