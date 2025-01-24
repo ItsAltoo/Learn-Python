@@ -1,8 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponse
 
 def index(request):
-    context = {
-        'title':'Portofolio',
-        
-    }
-    return render(request,'index.html')
+    return HttpResponse('Index Website'.upper())
