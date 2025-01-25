@@ -2,5 +2,37 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: '',sans-serif;
+    font-family: 'Adventure';
+}
+
+body{
+    background-color:#212121;
+}
+
+.heading{
+    text-align: center;
+    color: #00fe04;
+}
+
+.card{
+    text-align: center;
+}
+
+.card img{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 60%;
+    border: 2px solid #eaeaea;
+    border-radius: 2%;
+    transition: width 0.3s ease;
+}
+
+.card img:hover{
+    width: 62%;
+}
+
+p{
+    text-align: center;
+    font-size: 25px;
+    color: #eaeaea;
 }

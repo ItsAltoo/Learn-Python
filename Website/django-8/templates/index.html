@@ -1,1 +1,10 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block homePage %}
+    <div class="card">
+        <img src="{% static "img/bocchi.gif" %}" alt="">
+    </div>
+
+    <p>Website ini dibuat untuk have fun 🫠</p>
+{% endblock homePage %}
