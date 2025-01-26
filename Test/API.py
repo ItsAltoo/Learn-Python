@@ -1,10 +1,18 @@
 import requests
+from dotenv import load_dotenv
+import os
+
+# Muat file .env
+load_dotenv()
+
+# Ambil API key dari environment variable
+api_key = os.getenv('API')
 
 # Endpoint dan parameter
 url = "https://api.openweathermap.org/data/2.5/weather"
 params = {
     "q": "Samarinda",  # Nama kota
-    "appid": "6b0023afabd6da75d4e39872b7c08cda",  # Ganti dengan API key kamu
+    "appid": api_key,  # Ganti dengan API key kamu
     "units": "metric"  # Satuan suhu (Celsius)
 }
 
