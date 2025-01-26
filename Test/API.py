@@ -6,7 +6,7 @@ import os
 load_dotenv()
 
 # Ambil API key dari environment variable
-api_key = os.getenv('API')
+api_key = os.getenv('API_KEY')
 
 # Endpoint dan parameter
 url = "https://api.openweathermap.org/data/2.5/weather"
