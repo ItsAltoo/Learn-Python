@@ -1,29 +1,22 @@
 from django.shortcuts import render
+
 from .forms import MahasiswaForm
 from .models import Mahasiswa
 # Create your views here.
 
 
-def index(request):
-    mhs = Mahasiswa.objects.all()
-    context = {
-        'title':'Welcome',
-        'heading':'This Test Website',
-        'mahasiswa': mhs,
-    }
-    return render(request,'blog/index.html',context)
-
-
 def addMahasiswa(request):
-    form = MahasiswaForm()
-    if request.method == 'POST':
-        form = MahasiswaForm(request.POST)
-        if form.is_valid():
-            form.save()
+    if request.method == "POST":
+        name_mhs = request.POST['mhs_name']
+        nim_mhs = request.POST['mhs_nim']
+        bio_mhs = request.POST['mhs_bio']
+        
+        maha = Mahasiswa(nama=name_mhs,nim=nim_mhs,bio=bio_mhs)
+        maha.save()
+            
     context = {
         'title':'Add Mahasiswa',
         'heading':'Add Mahasiswa',
-        'form': form,
         'mhs': Mahasiswa.objects.all(),
     }
     return render(request,'blog/index.html',context)

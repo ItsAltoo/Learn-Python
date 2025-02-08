@@ -27,7 +27,7 @@ def auto_interact():
         
     #     time.sleep(0.5)  # Tambahkan jeda untuk mengurangi beban CPU
     
-    pyautogui.click()
+    pyautogui.alert('This is the message to display.')
 
     
 

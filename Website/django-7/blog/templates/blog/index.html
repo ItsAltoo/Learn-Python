@@ -8,8 +8,11 @@
   <body>
     <h1>{{title}}</h1>
     <h2>{{heading}}</h2>
-    <form method="post" >
-      {% csrf_token %} {{ form.as_p }}
+    <form method="post" style='display:grid;'>
+      {% csrf_token %} 
+      <input type="text" name="mhs_name" placeholder='Name'>
+      <input type="number" name="mhs_nim" placeholder='Nim'>
+      <input type="text" name="mhs_bio" placeholder='Bio'>
       <button type="submit">Submit</button>
     </form>
 
