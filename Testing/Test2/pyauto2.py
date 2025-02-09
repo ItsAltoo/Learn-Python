@@ -27,7 +27,16 @@ def auto_interact():
         
     #     time.sleep(0.5)  # Tambahkan jeda untuk mengurangi beban CPU
     
-    pyautogui.alert('This is the message to display.')
+    for i in range(1,5+1):
+        pyautogui.hotkey('ctrl','a')
+        time.sleep(0.5)
+        pyautogui.hotkey('ctrl','c')
+        pyautogui.click()
+        time.sleep(0.5)
+        pyautogui.press('enter')
+        time.sleep(0.5)
+        pyautogui.hotkey('ctrl','v')
+        print(f'copy ke :{i}')
 
     
 
