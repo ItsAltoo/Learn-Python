@@ -1,25 +1,56 @@
+{% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% tailwind_css %}
     <title>{{title}}</title>
   </head>
   <body>
-    <h1>{{title}}</h1>
-    <h2>{{heading}}</h2>
-    <form method="post" style='display:grid;'>
-      {% csrf_token %} 
-      <input type="text" name="mhs_name" placeholder='Name'>
-      <input type="number" name="mhs_nim" placeholder='Nim'>
-      <input type="text" name="mhs_bio" placeholder='Bio'>
-      <button type="submit">Submit</button>
-    </form>
+    <div class="grid content-center justify-center text-center">
+      <h1>{{title}}</h1>
+      <form method="post" style="display: grid">
+        {% csrf_token %}
+        <div>
+          <input type="text" name="mhs_name" placeholder="Name" />
+          {% if "Name is required." in errors %}
+          <p class="text-red-500">Name is required.</p>
+          {% endif %}
+        </div>
+        <div>
+          <input type="number" name="mhs_nim" placeholder="Nim" />
+          {% if "NIM is required." in errors %}
+          <p class="text-red-500">NIM is required.</p>
+          {% endif %}
+        </div>
+        <div>
+          <input type="text" name="mhs_bio" placeholder="Bio" />
+          {% if "Bio is required." in errors %}
+          <p class="text-red-500">Bio is required.</p>
+          {% endif %}
+        </div>
+        <button type="submit" class="btn btn-block">Submit</button>
+      </form>
+    </div>
 
-    {% for mahasiswa2024 in mhs %}
-    <h1>{{mahasiswa2024.nama}}</h1>
-    <p>{{mahasiswa2024.nim}}</p>
-    <p>{{mahasiswa2024.bio}}</p>
-    {% endfor %}
+    <div class="w-full flex flex-wrap gap-3 justify-center mt-5">
+      {% for mahasiswa2024 in mhs %}
+      <div class="card bg-base-100 w-96 shadow-xl flex border-zinc-400 border">
+        <div class="card-body">
+          <h2 class="card-title">{{mahasiswa2024.nama}}</h2>
+          <p><strong>NIM:</strong> {{mahasiswa2024.nim}}</p>
+          <p><strong>Bio:</strong> {{mahasiswa2024.bio}}</p>
+          <form
+            method="post"
+            action="{% url 'deleteMahasiswa' mahasiswa2024.id %}"
+          >
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </body>
 </html>
