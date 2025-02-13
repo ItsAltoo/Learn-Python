@@ -3,4 +3,7 @@ from .models import Mahasiswa
 
 # Register your models here.
 
-admin.site.register(Mahasiswa)
+class MemberMahasiswa(admin.ModelAdmin):
+    list_display = ('nama','nim',)
+
+admin.site.register(Mahasiswa,MemberMahasiswa)

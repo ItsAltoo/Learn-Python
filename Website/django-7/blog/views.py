@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.db import IntegrityError
 from .models import Mahasiswa
 
 # Create your views here.
@@ -17,9 +18,12 @@ def addMahasiswa(request):
             errors.append("Bio is required.")
         
         if not errors:
-            maha = Mahasiswa(nama=name_mhs, nim=nim_mhs, bio=bio_mhs)
-            maha.save()
-            return redirect('addMahasiswa')
+            try:
+                maha = Mahasiswa(nama=name_mhs, nim=nim_mhs, bio=bio_mhs)
+                maha.save()
+                return redirect('addMahasiswa')
+            except IntegrityError:
+                errors.append("NIM must be unique.")
     
     context = {
         'title': 'Add Mahasiswa',

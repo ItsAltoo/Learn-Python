@@ -22,6 +22,8 @@
           <input type="number" name="mhs_nim" placeholder="Nim" />
           {% if "NIM is required." in errors %}
           <p class="text-red-500">NIM is required.</p>
+          {% elif "NIM must be unique." in errors %}
+          <p class="text-red-500">NIM must be unique.</p>
           {% endif %}
         </div>
         <div>
@@ -46,7 +48,7 @@
             action="{% url 'deleteMahasiswa' mahasiswa2024.id %}"
           >
             {% csrf_token %}
-            <button type="submit" class="btn btn-danger">Delete</button>
+            <button type="submit" class="btn">Delete</button>
           </form>
         </div>
       </div>
