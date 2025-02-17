@@ -1,5 +1,2 @@
-# Ignore .env file
 .env
-
-# Ignore dist directory
 dist/
