@@ -38,6 +38,8 @@ def del_kontak():
             return
     print('Kontak tidak di temukan !')
     
+    
+    
 if __name__ == '__main__':
     while True:
         print(""" Buat Kontak Anda

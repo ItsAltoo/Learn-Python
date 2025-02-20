@@ -1,0 +1,4 @@
+Django
+mysqlclient
+django-tailwind
+django-browser-reload
