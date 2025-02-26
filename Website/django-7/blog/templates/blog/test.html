@@ -1,0 +1,25 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {%tailwind_css%}
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="w-96 h-96 relative bg-white border border-black  overflow-hidden">
+      <div class="w-96 h-96 left-0 top-0 absolute">
+        <div class="w-96 h-96 left-0 top-0 absolute bg-zinc-300"></div>
+        <img class="w-96 h-96 left-0 top-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] blur-none" src="https://placehold.co/1440x1024" />
+      </div>
+      <div class="w-96 h-20 left-0 top-0 absolute">
+        <div class="w-96 h-20 left-0 top-0 absolute bg-neutral-800 rounded-bl rounded-br"></div>
+        <div class="w-56 left-[1220px] top-[13px] absolute text-white text-4xl font-medium font-['Poppins']">Contact</div>
+        <div class="w-40 left-[1032px] top-[13px] absolute text-white text-4xl font-medium font-['Poppins']">About</div>
+        <div class="w-40 left-[844px] top-[13px] absolute text-white text-4xl font-bold font-['Poppins']">Home</div>
+        <div class="left-[25px] top-[9px] absolute"><span class="text-cyan-400 text-5xl font-bold font-['Poppins'] tracking-widest">lo</span><span class="text-white text-5xl font-bold font-['Poppins'] tracking-widest">go</span></div>
+      </div>
+    </div>
+  </body>
+</html>

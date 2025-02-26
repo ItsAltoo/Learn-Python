@@ -64,7 +64,7 @@ text_item = canvas.create_text(
 )
 
 def on_button_1_click():
-    canvas.itemconfig(text_item, text="Hello World")
+    canvas.itemconfig(text_item, text="HELLLLLLLLLO")
 
 button_1 = Button(
     image=button_image_1,

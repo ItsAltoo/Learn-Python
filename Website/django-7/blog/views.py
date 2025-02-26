@@ -36,3 +36,6 @@ def deleteMahasiswa(request, id):
     maha = get_object_or_404(Mahasiswa, id=id)
     maha.delete()
     return redirect('addMahasiswa')
+
+# def secondPage(request):
+#     return render(request,"blog/test.html")
