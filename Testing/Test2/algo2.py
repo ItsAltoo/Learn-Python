@@ -24,6 +24,7 @@ print("Sorted array:", my_array)
 
 print('-'*8)
 
+# bilan ganjil
 for i in range(1,10):
     if i % 2 != 0:
         print(i)

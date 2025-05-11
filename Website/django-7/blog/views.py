@@ -37,5 +37,31 @@ def deleteMahasiswa(request, id):
     maha.delete()
     return redirect('addMahasiswa')
 
-# def secondPage(request):
-#     return render(request,"blog/test.html")
+
+def updateMahasiswa(request, id):
+    maha = get_object_or_404(Mahasiswa, id=id)
+    errors = []
+    
+    if request.method == "POST":
+        name_mhs = request.POST.get('mhs_name')
+        nim_mhs = request.POST.get('mhs_nim')
+        bio_mhs = request.POST.get('mhs_bio')
+        
+        if not name_mhs:
+            errors.append("Name is required.")
+        if not nim_mhs:
+            errors.append("NIM is required.")
+        if not bio_mhs:
+            errors.append("Bio is required.")
+        
+        if not errors:
+            try:
+                maha.nama = name_mhs
+                maha.nim = nim_mhs
+                maha.bio = bio_mhs
+                maha.save()
+                return redirect('addMahasiswa')
+            except IntegrityError:
+                errors.append("NIM must be unique.")
+    
+    return redirect('addMahasiswa')

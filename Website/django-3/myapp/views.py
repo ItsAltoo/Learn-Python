@@ -7,4 +7,7 @@ def button(request):
     return HttpResponse('<button style = "background-color:#212121;color:#eaeaea;font-weight:500px">Click me</button>')
 
 def home(request):
-    return render(request, 'index.html')
+    return render(request, 'index.html',context={
+        'heading': 'Home Page',
+        'subheading': 'Welcome to the home page!',
+    })

@@ -50,6 +50,11 @@
             {% csrf_token %}
             <button type="submit" class="btn">Delete</button>
           </form>
+          <form method="post" action="{% url 'updateMahasiswa' mahasiswa2024.id %}">
+            {% csrf_token %}
+            
+            <button type="submit" class="btn">Update</button>
+          </form>
         </div>
       </div>
       {% endfor %}

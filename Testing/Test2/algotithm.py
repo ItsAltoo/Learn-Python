@@ -5,7 +5,7 @@ num2 = 1
 
 print(num1)
 print(num2)
-for i in range(19):
+for i in range(10):
     newnum = num1 + num2
     print(newnum)
     num1 = num2
@@ -22,9 +22,9 @@ def F(n):
 print(F(19))
     
 print(20*'- ')
-#DSA Array
 
-my_array = [2,6,3,1,5,7]
+#DSA Array
+my_array = [6,6,3,8,5,7]
 nilai_awal = my_array[0]
 
 for i in my_array:
