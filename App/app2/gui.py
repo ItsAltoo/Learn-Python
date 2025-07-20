@@ -35,8 +35,11 @@ canvas = Canvas(
 
 
 canvas.place(x = 0, y = 0)
+
+
 image_image_1 = PhotoImage(
     file=relative_to_assets("image_1.png"))
+
 image_1 = canvas.create_image(
     110.0,
     90.0,
@@ -49,6 +52,7 @@ button_image_1 = PhotoImage(
 
 image_image_2 = PhotoImage(
     file=relative_to_assets("image_2.png"))
+
 image_2 = canvas.create_image(
     110.0,
     62.0,
